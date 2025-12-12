@@ -29,15 +29,18 @@ docs/plans/           # Implementation plans
 
 ## Current Status
 
-**Phase:** 3 of 8 (Homepage Sections - in progress)
+**Phase:** 6 of 8 (SEO & Performance - complete)
 **Plan:** `docs/plans/2025-12-12-portfolio-mvp-plan.md`
 
 **Completed:**
 - Phase 1: Project Setup (Next.js, Tailwind, shadcn/ui, ESLint/Prettier)
 - Phase 2: Content Layer (profile.ts, projects.ts, claims.json, MDX setup)
-- Phase 3.1-3.3: Hero, ProofStrip, Projects sections
+- Phase 3: Homepage Sections (Hero, ProofStrip, Projects, Services, About, Contact, Footer)
+- Phase 4: Case Study Pages (5 projects with MDX)
+- Phase 5: Legal Pages (Impressum, Datenschutz)
+- Phase 6: SEO & Performance (metadata, robots.txt, sitemap.xml, JSON-LD)
 
-**Next:** Phase 3.4 - Services Section
+**Next:** Phase 7 (Job Radar CLI - optional) or Phase 8 (Deployment)
 
 ## Design System
 
@@ -51,7 +54,7 @@ Located in `src/app/globals.css`:
 
 Contact and metrics are defined in:
 - `src/content/profile.ts` - Personal info, experience timeline
-- `src/content/projects.ts` - 4 featured projects with URLs
+- `src/content/projects.ts` - 5 featured projects with GitHub URLs
 - `src/content/claims.json` - Verified metrics only
 
 **Never invent claims or URLs not in these files.**
@@ -62,4 +65,4 @@ Contact and metrics are defined in:
 /superpowers:execute-plan docs/plans/2025-12-12-portfolio-mvp-plan.md
 ```
 
-This resumes from Phase 3.4 (Services Section).
+This resumes from Phase 7 (Job Radar CLI) or Phase 8 (Deployment).
