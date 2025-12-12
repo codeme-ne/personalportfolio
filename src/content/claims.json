@@ -1,0 +1,36 @@
+{
+  "claims": [
+    {
+      "id": "agile-velocity",
+      "claim": "Team-Velocity +15%",
+      "context": "Agile Coach bei UBS Card Center",
+      "source": "Interne Messung",
+      "safe": true
+    },
+    {
+      "id": "seo-pipeline",
+      "claim": "-10h/Woche, +25% Traffic (3 Monate)",
+      "context": "SEO Content Pipeline Automation",
+      "source": "Analytics-Daten",
+      "safe": true
+    },
+    {
+      "id": "ecommerce-chatbot",
+      "claim": "-60% Standardanfragen",
+      "context": "E-Commerce Chatbot Implementation",
+      "source": "Support-Ticket-Analyse",
+      "safe": true
+    },
+    {
+      "id": "produktiv-workshop",
+      "claim": "17 Teilnehmer, ausverkauft",
+      "context": "ProduKItv Workshop",
+      "source": "Veranstaltungsdaten",
+      "safe": true
+    }
+  ],
+  "_meta": {
+    "lastVerified": "2025-12-12",
+    "note": "Only add claims that can be verified. Set safe: false for claims requiring review."
+  }
+}

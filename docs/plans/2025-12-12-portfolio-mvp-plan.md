@@ -1,7 +1,7 @@
 # Portfolio Website MVP - Implementation Plan
 
 **Date:** 2025-12-12
-**Status:** Ready for Implementation
+**Status:** In Progress
 
 ## Overview
 
@@ -17,24 +17,75 @@ Personal portfolio website for Lukas Zangerl targeting coaches, trainers, and se
 
 ---
 
-## Phase 1: Project Setup
+## Session Log
+
+### 2025-12-12 Session 1
+**Completed:** Phase 1 + Phase 2 + Phase 3 (partial)
+
+**What was built:**
+- Next.js 15 project with App Router, TypeScript (strict), Tailwind v4, shadcn/ui, ESLint + Prettier
+- Design system in `globals.css` with HSL colors, typography utilities, spacing, shadows
+- Content layer: `profile.ts`, `projects.ts`, `claims.json` with verified data
+- MDX setup with `next-mdx-remote` and `gray-matter`
+- Homepage components: Hero, ProofStrip, Projects section with ProjectCard
+
+**Key files created:**
+- `src/app/globals.css` - Design system tokens
+- `src/app/layout.tsx` - Root layout with Inter font, German lang
+- `src/app/page.tsx` - Homepage with Hero, ProofStrip, Projects
+- `src/content/profile.ts` - Verified personal data
+- `src/content/projects.ts` - 4 featured projects
+- `src/content/claims.json` - Verified metrics
+- `src/lib/mdx.ts` - MDX content loader
+- `src/lib/claims.ts` - Claims utilities
+- `src/components/hero.tsx`
+- `src/components/proof-strip.tsx`
+- `src/components/project-card.tsx`
+- `src/components/projects.tsx`
+- `src/components/mdx-components.tsx`
+
+**Build status:** ✅ Passing
+
+### 2025-12-12 Session 2
+**Completed:** Phase 3 (remaining sections)
+
+**What was built:**
+- Services section with 3 service offerings (System-Check, Automations-Sprint, Komplett-System)
+- About section with story text + vertical timeline
+- Contact section with email/LinkedIn links + availability badge
+- Footer with legal links + copyright
+
+**Key files created:**
+- `src/content/services.ts` - 3 service definitions
+- `src/components/service-card.tsx` - Service card with blue accent, checkmarks
+- `src/components/services.tsx` - Services section wrapper
+- `src/components/timeline.tsx` - Vertical timeline component
+- `src/components/about.tsx` - About section (60/40 layout)
+- `src/components/contact.tsx` - Contact section with availability badge
+- `src/components/footer.tsx` - Footer with legal links
+
+**Build status:** ✅ Passing
+
+---
+
+## Phase 1: Project Setup ✅ COMPLETE
 
 ### 1.1 Initialize Next.js Project
-- [ ] Create Next.js 15 app with App Router
-- [ ] Configure TypeScript strict mode
-- [ ] Set up Tailwind CSS
-- [ ] Install and configure shadcn/ui
-- [ ] Set up ESLint + Prettier
+- [x] Create Next.js 15 app with App Router
+- [x] Configure TypeScript strict mode
+- [x] Set up Tailwind CSS
+- [x] Install and configure shadcn/ui
+- [x] Set up ESLint + Prettier
 
 ### 1.2 Configure Design System
-- [ ] Create `tailwind.config.ts` with HSL color scale
-- [ ] Define typography scale (Inter font)
-- [ ] Set up spacing scale (4px base)
-- [ ] Configure shadow elevation system
-- [ ] Define border radius tokens
+- [x] Create `tailwind.config.ts` with HSL color scale
+- [x] Define typography scale (Inter font)
+- [x] Set up spacing scale (4px base)
+- [x] Configure shadow elevation system
+- [x] Define border radius tokens
 
 ### 1.3 Project Structure
-- [ ] Create folder structure:
+- [x] Create folder structure:
   ```
   app/
   components/
@@ -42,76 +93,74 @@ Personal portfolio website for Lukas Zangerl targeting coaches, trainers, and se
   lib/
   automation/
   ```
-- [ ] Set up path aliases in tsconfig
+- [x] Set up path aliases in tsconfig
 
 ---
 
-## Phase 2: Content Layer
+## Phase 2: Content Layer ✅ COMPLETE
 
 ### 2.1 Profile & Projects Data
-- [ ] Create `content/profile.ts` with verified personal data
-- [ ] Create `content/projects.ts` with 4-6 featured projects
-- [ ] Add project metadata (title, description, tech tags, links)
+- [x] Create `content/profile.ts` with verified personal data
+- [x] Create `content/projects.ts` with 4-6 featured projects
+- [x] Add project metadata (title, description, tech tags, links)
 
 ### 2.2 MDX Setup
-- [ ] Install next-mdx-remote or @next/mdx
-- [ ] Create MDX components for case studies
-- [ ] Set up MDX content loader for /projekte/[slug]
+- [x] Install next-mdx-remote or @next/mdx
+- [x] Create MDX components for case studies
+- [x] Set up MDX content loader for /projekte/[slug]
 
 ### 2.3 Claims System (Credibility)
-- [ ] Create `content/claims.json` with verified metrics
-- [ ] Define claim structure: { id, claim, source, safe }
+- [x] Create `content/claims.json` with verified metrics
+- [x] Define claim structure: { id, claim, source, safe }
 - [ ] Optional: Create verify-claims script for build
 
 ---
 
-## Phase 3: Homepage Sections
+## Phase 3: Homepage Sections ✅ COMPLETE
 
-### 3.1 Hero Section
-- [ ] Create Hero component
-- [ ] Pre-headline: "KI-Automatisierung für Coaches, Trainer & Selbständige"
-- [ ] Headline: "Ich baue KI-Systeme, die Deinen Alltag leichter machen..."
-- [ ] Two CTAs: Primary (Projekt anfragen) + Secondary (Beispiele ansehen)
-- [ ] Responsive layout (mobile-first)
+### 3.1 Hero Section ✅
+- [x] Create Hero component
+- [x] Pre-headline: "KI-Automatisierung für Coaches, Trainer & Selbständige"
+- [x] Headline: "Ich baue KI-Systeme, die Deinen Alltag leichter machen..."
+- [x] Two CTAs: Primary (Projekt anfragen) + Secondary (Beispiele ansehen)
+- [x] Responsive layout (mobile-first)
 
-### 3.2 Proof Strip
-- [ ] Create ProofStrip component
-- [ ] GitHub, LinkedIn links with icons
-- [ ] Live demo links (checkst-bot, linkedin-posts-one, pagetopic)
-- [ ] De-emphasized styling (--gray-500, small text)
+### 3.2 Proof Strip ✅
+- [x] Create ProofStrip component
+- [x] GitHub, LinkedIn links with icons
+- [x] Live demo links (checkst-bot, linkedin-posts-one, pagetopic)
+- [x] De-emphasized styling (--gray-500, small text)
 
-### 3.3 Projects Section
-- [ ] Create ProjectCard component
-- [ ] Grid layout (responsive: 1 → 2 → 3 columns)
-- [ ] Card styling: --gray-100 bg, --shadow-sm, hover elevation
-- [ ] Tech tags as pills
-- [ ] "Mehr erfahren →" links
+### 3.3 Projects Section ✅
+- [x] Create ProjectCard component
+- [x] Grid layout (responsive: 1 → 2 → 3 columns)
+- [x] Card styling: --gray-100 bg, --shadow-sm, hover elevation
+- [x] Tech tags as pills
+- [x] "Mehr erfahren →" links
 
-### 3.4 Services Section
-- [ ] Create ServiceCard component
-- [ ] Three cards: System-Check, Automations-Sprint, Komplett-System
-- [ ] Blue top border accent
-- [ ] "Du bekommst:" highlighted with checkmark icons
-- [ ] Individual CTAs per card
+### 3.4 Services Section ✅
+- [x] Create ServiceCard component
+- [x] Three cards: System-Check, Automations-Sprint, Komplett-System
+- [x] Blue top border accent
+- [x] "Du bekommst:" highlighted with checkmark icons
+- [x] Individual CTAs per card
 
-### 3.5 About Section
-- [ ] Create About component with 60/40 layout
-- [ ] Story text (max-width: 32em)
-- [ ] Vertical timeline component
-- [ ] Timeline dots in --blue-500, years de-emphasized
-- [ ] Optional: Photo placeholder
+### 3.5 About Section ✅
+- [x] Create About component with 60/40 layout
+- [x] Story text (max-width: 32em)
+- [x] Vertical timeline component
+- [x] Timeline dots in --blue-500, years de-emphasized
 
-### 3.6 Contact Section
-- [ ] Create Contact component
-- [ ] Headline + copy with emphasized response time
-- [ ] Email + LinkedIn links with icons
-- [ ] Availability badge (--shadow-sm, compact)
-- [ ] Optional: Resend contact form (env-gated)
+### 3.6 Contact Section ✅
+- [x] Create Contact component
+- [x] Headline + copy with emphasized response time
+- [x] Email + LinkedIn links with icons
+- [x] Availability badge (--shadow-sm, compact)
 
-### 3.7 Footer
-- [ ] Create Footer component
-- [ ] Links: Impressum, Datenschutz
-- [ ] Copyright + availability info
+### 3.7 Footer ✅
+- [x] Create Footer component
+- [x] Links: Impressum, Datenschutz
+- [x] Copyright + availability info
 
 ---
 
@@ -307,10 +356,13 @@ Personal portfolio website for Lukas Zangerl targeting coaches, trainers, and se
 
 ---
 
-## Next Steps
+## Next Steps (Continue Here)
 
-1. Start with Phase 1 (Project Setup)
-2. Work through phases sequentially
-3. Each task should take 5-15 minutes
-4. Mark tasks complete as you go
-5. Review and iterate after each phase
+**Resume at:** Phase 4 - Case Study Pages
+
+**Next batch should include:**
+1. Dynamic route setup (`app/projekte/[slug]/page.tsx`)
+2. Case study template with Problem/Lösung/Ergebnis sections
+3. MDX content for each project
+
+**To continue:** Run `/superpowers:execute-plan docs/plans/2025-12-12-portfolio-mvp-plan.md`
