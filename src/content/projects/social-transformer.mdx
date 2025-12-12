@@ -1,0 +1,33 @@
+---
+title: Social Transformer
+description: Verwandelt Newsletter und Artikel in plattform-optimierte Social-Media-Posts für LinkedIn, Twitter und Instagram.
+tags:
+  - React
+  - TypeScript
+  - Claude AI
+  - Supabase
+githubUrl: https://github.com/codeme-ne/Blogpost-zu-Socialmedia-Beitrag
+problem: Content-Ersteller müssen den gleichen Inhalt manuell für verschiedene Plattformen anpassen. LinkedIn braucht professionellen Ton, Twitter kurze Hooks, Instagram visuelle Beschreibungen. Das kostet Zeit und führt zu inkonsistenter Qualität.
+solution: Eine KI-Plattform, die jeden Text automatisch für LinkedIn, Twitter/X und Instagram transformiert. Claude 3.5 Sonnet analysiert den Input und generiert plattform-spezifische Versionen in einem Batch-Call - das spart 67% API-Kosten gegenüber einzelnen Requests.
+result: Production-App mit Freemium-Modell (3 Generierungen/Tag kostenlos), Supabase Auth mit Row-Level Security, 29 Unit Tests und vollständiger CI/CD-Pipeline. Tone-Customization und URL-Extraktion inklusive.
+improvements: Direktes Posting via Social Media APIs. A/B-Testing verschiedener Varianten. Analytics zur Performance-Messung.
+sourceUrl: https://github.com/codeme-ne/Blogpost-zu-Socialmedia-Beitrag
+---
+
+## Unterstützte Plattformen
+
+- **LinkedIn:** Professioneller Ton, Storytelling-Format, Hashtags
+- **Twitter/X:** Kurze Hooks, Thread-Optimierung, Engagement-Fokus
+- **Instagram:** Visuell orientierte Captions, Emoji-Nutzung, CTA
+
+## Tech Stack
+
+| Layer | Technologie |
+|-------|-------------|
+| Frontend | React 19, TypeScript 5.9, Vite 7 |
+| Styling | TailwindCSS 3.4, shadcn/ui |
+| Backend | Vercel Edge Functions |
+| Database | Supabase (PostgreSQL + RLS) |
+| AI | Claude 3.5 Sonnet |
+| Payments | Stripe |
+| Testing | Vitest (29 Tests) |

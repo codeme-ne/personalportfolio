@@ -1,0 +1,37 @@
+---
+title: Telegram Voice Transcriber
+description: Exportiere und transkribiere Telegram-Sprachnachrichten lokal mit Whisper AI. Kein Telegram Premium nötig.
+tags:
+  - Python
+  - Whisper
+  - Streamlit
+  - Telethon
+githubUrl: https://github.com/codeme-ne/Telegram-Voice-Transcriber
+problem: Telegram Premium kostet Geld nur für Sprachnachrichten-Transkription. Viele Nutzer haben wichtige Voice Messages, die sie durchsuchen oder archivieren möchten - ohne monatliche Gebühren oder Cloud-Upload ihrer privaten Nachrichten.
+solution: Ein lokales Tool, das Telegram-Sprachnachrichten über die Standard-API exportiert und mit OpenAI Whisper transkribiert. Komplett offline nach dem Download - keine Daten verlassen den eigenen Rechner. Web-UI (Streamlit) und CLI (Typer) für flexible Nutzung.
+result: Privacy-fokussierte Lösung mit flexiblen Filtern (Absender, Nachrichtentyp, Datumsbereich), automatischem State-Tracking für unterbrechbare Verarbeitung und freiem API-Zugang ohne Premium.
+improvements: GPU-Beschleunigung für schnellere Transkription. Zusammenfassungen langer Voice-Threads. Export-Formate für Notion/Obsidian.
+sourceUrl: https://github.com/codeme-ne/Telegram-Voice-Transcriber
+---
+
+## Key Features
+
+- **100% Lokal:** Alle Daten bleiben auf deinem Rechner
+- **Flexible Filter:** Nach Absender, Typ, Datum filtern
+- **Resumable:** Unterbrochene Verarbeitung fortsetzen
+- **Dual Interface:** Web-UI oder Command Line
+
+## Requirements
+
+- Python 3.10+
+- FFmpeg
+- ~2GB Speicher für Whisper-Modelle (einmaliger Download)
+
+## Tech Stack
+
+| Komponente | Technologie |
+|------------|-------------|
+| Telegram API | Telethon (MTProto Client) |
+| Transkription | faster-whisper |
+| Web UI | Streamlit |
+| CLI | Typer |

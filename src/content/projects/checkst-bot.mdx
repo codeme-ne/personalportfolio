@@ -1,0 +1,34 @@
+---
+title: checkstBot
+description: RAG-powered Learning Assistant - Dokumente hochladen, semantisch durchsuchen und KI-gestützte Erklärungen erhalten.
+tags:
+  - Next.js
+  - OpenAI
+  - Pinecone
+  - TypeScript
+liveUrl: https://checkst-bot.vercel.app
+githubUrl: https://github.com/codeme-ne/checkstBot
+problem: Studenten und Forscher verbringen viel Zeit damit, in langen Dokumenten nach relevanten Informationen zu suchen. Traditionelle Keyword-Suche findet nicht immer das Gesuchte, besonders bei komplexen Fachthemen.
+solution: Ein RAG-powered Learning Assistant mit Retrieval-Augmented Generation. Dokumente werden in Vektoren umgewandelt (OpenAI Embeddings) und in Pinecone gespeichert. Bei Fragen werden semantisch ähnliche Passagen gefunden und von GPT-4 als kontextbezogene Antwort aufbereitet.
+result: Production-ready Anwendung mit Multi-Format-Support (PDF, DOCX, TXT, Markdown), persistenter Konversationshistorie pro Dokument, Text-Highlighting für kontextuelle Queries und robuster Sicherheit (CSRF, Rate Limiting).
+improvements: Mobile-App für unterwegs. Collaborative Features für Lerngruppen. Integration mit Notion und anderen Wissensmanagement-Tools.
+sourceUrl: https://github.com/codeme-ne/checkstBot
+---
+
+## Tech Stack Details
+
+| Layer | Technologie |
+|-------|-------------|
+| Framework | Next.js 14 (Pages Router) |
+| Sprache | TypeScript (strict mode) |
+| Styling | Tailwind CSS |
+| Embeddings | OpenAI text-embedding-ada-002 |
+| Vector DB | Pinecone |
+| LLM | OpenAI GPT-4 |
+
+## Key Features
+
+- **Multi-Format Upload:** PDF, DOCX, TXT, Markdown
+- **Semantische Suche:** Findet relevante Passagen auch bei unterschiedlicher Wortwahl
+- **Kontext-Antworten:** GPT-4 erklärt basierend auf deinen Dokumenten
+- **Text-Highlighting:** Markiere Text für gezielte Nachfragen

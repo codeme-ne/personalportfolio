@@ -1,0 +1,34 @@
+---
+title: Gemini Image & Prompt
+description: Verwandle jede URL in ein beeindruckendes KI-generiertes Bild. Mit Stil-Presets wie Ghibli, LEGO oder Claymation.
+tags:
+  - Next.js
+  - Gemini
+  - Imagen 4
+  - Stripe
+githubUrl: https://github.com/codeme-ne/Gemini-Image-und-Prompt
+problem: Die Erstellung von visuell ansprechenden Bildern für Content erfordert entweder Design-Skills oder teure Stock-Fotos. URL-zu-Bild-Generierung mit KI war bisher komplex und erforderte technisches Know-how.
+solution: Eine Web-App, die jeden URL-Inhalt automatisch extrahiert (via Firecrawl), einen kreativen Prompt mit Gemini 2.5 Flash generiert und ein Bild mit Imagen 4 erstellt. Voreingestellte Stil-Presets (Ghibli, LEGO, Claymation, Vector Art, Sumi-e) machen die Nutzung einfach.
+result: Vollständige SaaS-Anwendung mit Passwordless Auth, Credit-System (1 Credit = 1 Bild), Stripe-Integration und Rate Limiting. Open Source unter MIT-Lizenz.
+improvements: Mehr Stil-Presets auf Basis von Nutzer-Feedback. Batch-Verarbeitung für mehrere URLs. API-Zugang für Entwickler.
+sourceUrl: https://github.com/codeme-ne/Gemini-Image-und-Prompt
+---
+
+## Verfügbare Stil-Presets
+
+- **Ghibli:** Studio Ghibli Anime-Stil
+- **LEGO:** Plastik-Bausteine Ästhetik
+- **Claymation:** Stop-Motion Knetfiguren Look
+- **Vector Art:** Flache, geometrische Illustrationen
+- **Sumi-e:** Japanische Tusche-Malerei
+
+## Tech Stack
+
+| Komponente | Technologie |
+|------------|-------------|
+| Content Extraction | Firecrawl |
+| Prompt Generation | Google Gemini 2.5 Flash |
+| Image Generation | Google Imagen 4 (via Fal.ai) |
+| Auth | NextAuth + Resend (Passwordless) |
+| Payments | Stripe (Credit Packs) |
+| Rate Limiting | Upstash Redis |
