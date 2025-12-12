@@ -1,6 +1,7 @@
 import { Hero } from '@/components/hero'
 import { ProofStrip } from '@/components/proof-strip'
 import { Projects } from '@/components/projects'
+import { Tools } from '@/components/tools'
 import { Services } from '@/components/services'
 import { About } from '@/components/about'
 import { Contact } from '@/components/contact'
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <ProofStrip />
         <Projects />
+        <Tools />
         <Services />
         <About />
         <Contact />

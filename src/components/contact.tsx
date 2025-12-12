@@ -3,25 +3,19 @@ import { profile } from '@/content/profile'
 
 export function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50">
+    <section id="kontakt" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-section mb-4">Lass uns sprechen</h2>
           <p className="text-body text-gray-600 mb-2">
-            Du hast eine Idee, ein Problem oder einfach Fragen? Schreib mir – ich
-            antworte in der Regel{' '}
-            <span className="font-semibold text-gray-900">
-              innerhalb von 24 Stunden
-            </span>
-            .
+            Du hast eine Idee, ein Problem oder einfach Fragen? Schreib mir – ich antworte in der
+            Regel <span className="font-semibold text-gray-900">innerhalb von 24 Stunden</span>.
           </p>
 
           {/* Availability badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-sm text-caption mb-8">
             <span className="h-2 w-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-gray-600">
-              Aktuell verfügbar für neue Projekte
-            </span>
+            <span className="text-gray-600">Aktuell verfügbar für neue Projekte</span>
           </div>
 
           {/* Contact links */}
