@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website - Lukas Zangerl
+
+Personal portfolio website targeting coaches, trainers, and self-employed professionals in the DACH region.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcodeme-ne%2Fpersonalportfolio&env=NEXT_PUBLIC_SITE_URL&envDescription=Your%20production%20domain%20URL&envLink=https%3A%2F%2Fgithub.com%2Fcodeme-ne%2Fpersonalportfolio%23environment-variables&project-name=portfolio&repository-name=portfolio)
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript (strict mode)
+- **Styling:** Tailwind CSS v4 + shadcn/ui
+- **Content:** MDX for case studies
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/codeme-ne/personalportfolio.git
+cd personalportfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server with Turbopack |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Format with Prettier |
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file (see `.env.example`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Site URL (used for sitemap, robots.txt, and metadata)
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Note:** This variable defaults to `https://lukaszangerl.de` if not set.
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/              # Next.js App Router pages
+│   ├── projekte/     # Case study pages (dynamic routes)
+│   ├── impressum/    # Legal: Impressum
+│   ├── datenschutz/  # Legal: Datenschutz
+│   ├── sitemap.ts    # Dynamic sitemap
+│   └── robots.ts     # Dynamic robots.txt
+├── components/       # React components
+├── content/          # Static content
+│   ├── profile.ts    # Personal info
+│   ├── projects.ts   # Project data
+│   ├── services.ts   # Service offerings
+│   ├── claims.json   # Verified metrics
+│   └── projects/     # MDX case studies
+└── lib/              # Utilities
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Click the "Deploy with Vercel" button above
+2. Set `NEXT_PUBLIC_SITE_URL` to your production domain
+3. Deploy
+
+### Manual Deployment
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy to production
+vercel --prod
+```
+
+### Custom Domain Configuration
+
+1. Go to your [Vercel Dashboard](https://vercel.com/dashboard)
+2. Select your project → Settings → Domains
+3. Add your custom domain (e.g., `lukaszangerl.de`)
+4. Configure DNS at your registrar:
+   - **Option A (Recommended):** Add an `A` record pointing to `76.76.21.21`
+   - **Option B:** Add a `CNAME` record pointing to `cname.vercel-dns.com`
+5. Wait for DNS propagation (usually 1-48 hours)
+6. Vercel automatically provisions SSL certificate
+
+**After adding custom domain:**
+- Update `NEXT_PUBLIC_SITE_URL` in Vercel Environment Variables
+- Redeploy to update sitemap and metadata
+
+## License
+
+All rights reserved. This is a personal portfolio website.

@@ -87,6 +87,26 @@ Personal portfolio website for Lukas Zangerl targeting coaches, trainers, and se
 
 **Build status:** ✅ Passing
 
+### 2025-12-12 Session 4
+**Completed:** Phase 8 (Deployment)
+
+**What was built:**
+- Vercel deployment configuration (vercel.json with security headers, Frankfurt region)
+- Environment variable documentation (.env.example)
+- Production deployment to Vercel
+- Comprehensive README.md with setup/deployment instructions
+- Deploy to Vercel button for one-click deployment
+- Custom domain configuration documentation
+
+**Key files created/updated:**
+- `vercel.json` - Vercel config (framework, region, security headers)
+- `.env.example` - Environment variable documentation
+- `README.md` - Complete setup and deployment guide
+
+**Production URL:** https://portfoliowebsite-olive-nine.vercel.app
+
+**Build status:** ✅ Passing
+
 ---
 
 ## Phase 1: Project Setup ✅ COMPLETE
@@ -269,22 +289,22 @@ Personal portfolio website for Lukas Zangerl targeting coaches, trainers, and se
 
 ---
 
-## Phase 8: Deployment
+## Phase 8: Deployment ✅ COMPLETE
 
 ### 8.1 Vercel Setup
-- [ ] Create vercel.json (if needed)
-- [ ] Configure environment variables
-- [ ] Test preview deployment
+- [x] Create vercel.json (if needed)
+- [x] Configure environment variables
+- [x] Test preview deployment
 
 ### 8.2 Domain
-- [ ] Configure custom domain (TBD)
-- [ ] Set up SSL
-- [ ] Verify deployment
+- [x] Deploy to Vercel production
+- [x] SSL auto-provisioned by Vercel
+- [x] Verify deployment (all pages working)
 
 ### 8.3 Documentation
-- [ ] Update README.md with setup instructions
-- [ ] Document env vars
-- [ ] Add "Deploy to Vercel" button
+- [x] Update README.md with setup instructions
+- [x] Document env vars
+- [x] Add "Deploy to Vercel" button
 
 ---
 
@@ -380,14 +400,20 @@ Personal portfolio website for Lukas Zangerl targeting coaches, trainers, and se
 
 ## Next Steps (Continue Here)
 
-**Resume at:** Phase 7 - Job Radar CLI (Optional) or Phase 8 - Deployment
+**Status:** Portfolio MVP Complete and Deployed!
 
-**Completed so far:**
-- Phase 1-6 complete (Portfolio website fully functional)
-- 13 routes: Homepage, 5 projects, 2 legal pages, robots.txt, sitemap.xml
+**Completed:**
+- Phase 1-6: Portfolio website fully functional
+- Phase 8: Deployed to Vercel
 
-**Next batch options:**
-1. Phase 7: Job Radar CLI (automation tooling)
-2. Phase 8: Deployment to Vercel
+**Production URL:** https://portfoliowebsite-olive-nine.vercel.app
 
-**To continue:** Run `/superpowers:execute-plan docs/plans/2025-12-12-portfolio-mvp-plan.md`
+**Remaining (Optional):**
+- Phase 7: Job Radar CLI (automation tooling) - can be added later
+- Custom domain: Configure `lukaszangerl.de` when ready
+
+**To add custom domain:**
+1. Go to Vercel Dashboard → Project → Settings → Domains
+2. Add `lukaszangerl.de`
+3. Configure DNS (A record → 76.76.21.21)
+4. Update `NEXT_PUBLIC_SITE_URL` env var and redeploy

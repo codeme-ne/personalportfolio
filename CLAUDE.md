@@ -29,7 +29,8 @@ docs/plans/           # Implementation plans
 
 ## Current Status
 
-**Phase:** 6 of 8 (SEO & Performance - complete)
+**Status:** MVP Complete & Deployed
+**Production URL:** https://portfoliowebsite-olive-nine.vercel.app
 **Plan:** `docs/plans/2025-12-12-portfolio-mvp-plan.md`
 
 **Completed:**
@@ -39,8 +40,9 @@ docs/plans/           # Implementation plans
 - Phase 4: Case Study Pages (5 projects with MDX)
 - Phase 5: Legal Pages (Impressum, Datenschutz)
 - Phase 6: SEO & Performance (metadata, robots.txt, sitemap.xml, JSON-LD)
+- Phase 8: Deployment (Vercel, README, env documentation)
 
-**Next:** Phase 7 (Job Radar CLI - optional) or Phase 8 (Deployment)
+**Optional:** Phase 7 (Job Radar CLI) - can be added later
 
 ## Design System
 
@@ -61,8 +63,7 @@ Contact and metrics are defined in:
 
 ## Continue Development
 
-```bash
-/superpowers:execute-plan docs/plans/2025-12-12-portfolio-mvp-plan.md
-```
+The portfolio MVP is complete and deployed. Optional next steps:
 
-This resumes from Phase 7 (Job Radar CLI) or Phase 8 (Deployment).
+1. **Add custom domain:** Configure `lukaszangerl.de` in Vercel Dashboard
+2. **Job Radar CLI:** Run `/superpowers:execute-plan docs/plans/2025-12-12-portfolio-mvp-plan.md` to implement Phase 7
