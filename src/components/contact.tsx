@@ -3,7 +3,7 @@ import { profile } from '@/content/profile'
 
 export function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50">
+    <section id="kontakt" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-section mb-4">Lass uns sprechen</h2>
